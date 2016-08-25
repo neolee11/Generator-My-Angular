@@ -1,0 +1,11 @@
+{
+  "name": "generator-my-angular",
+  "version": "1.0.0",
+  "description": "Angular 1 generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Li",
+  "license": "MIT"
+}
