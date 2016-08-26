@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script>
+        window.timeStart = Date.now();
+    </script>
+    <title>GARD Wizard</title>
+	<base href="/"/>
+
+    <!-- build:css styles/lib.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/app.css-->
+    <!-- inject:css -->
+	<link rel="stylesheet" href="/tmp/styles.css">
+	<!-- endinject -->
+    <!-- endbuild -->
+
+	<!--css not loaded by wiredep-->
+	<!-- end css not loaded by wiredep -->
+</head>
+<body>
+    <!--<div class="container">-->
+        <!--<div ng-include="'app/layout/shell.html'"></div>-->
+    <!--</div>-->
+
+    <div class="container-fluid">
+        <!--<header class="well">-->
+            <!--<div ng-include="'app/layout/topnav.html'"></div>-->
+        <!--</header>-->
+
+        <section id="content">
+		<!--<div class="span12 ui-view-container">-->
+		<!--<resolve-loader></resolve-loader>-->
+        <div ui-view id="ui-view" class="main-view"></div>
+
+		<div id="loadingSpinner" class="hidden">
+			<img id="loadingSpinnerImg" src="images/busy.gif"/>
+			<!--Get animated gif from http://preloaders.net/-->
+		</div>
+
+		<!--</div>-->
+        </section>
+    </div>
+
+    <!-- build:js js/lib.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/iframe-resizer/src/iframeResizer.js"></script>
+    <script src="/bower_components/iframe-resizer/src/iframeResizer.contentWindow.js"></script>
+    <script src="/bower_components/angular-audio/app/angular.audio.js"></script>
+    <script src="/bower_components/stacktrace-js/stacktrace.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!--script not loaded by wiredep-->
+
+    <!-- polyfill to make xhr requests from ie9 -->
+    <!--[if lt IE 10]>
+    <script src="//cdn.rawgit.com/jpillora/xdomain/0.7.3/dist/xdomain.min.js"></script>
+    <script>
+        xdomain.slaves({
+            "https://api.rarediseases.info.nih.gov": "/proxy.html"
+        });
+    </script>
+    <![endif]-->
+    <!-- ------------------------------------------------------------------------ -->
+
+    <!-- end script not loaded by wiredep -->
+
+    <!-- build:js js/app.js-->
+    <!-- inject:js -->
+    <script src="/src/client/app/input3/input3.module.js"></script>
+    <script src="/src/client/app/inputs/inputs.module.js"></script>
+    <script src="/src/client/app/contact/contact.module.js"></script>
+    <script src="/src/client/app/input2/input2.module.js"></script>
+    <script src="/src/client/app/core/core.module.js"></script>
+    <script src="/src/client/app/widgets/widgets.module.js"></script>
+    <script src="/src/client/app/layout/layout.module.js"></script>
+    <script src="/src/client/app/results/results.module.js"></script>
+    <script src="/src/client/app/app.js"></script>
+    <script src="/src/client/app/input3/input3.js"></script>
+    <script src="/src/client/app/input3/input3.route.js"></script>
+    <script src="/src/client/app/inputs/inputs.js"></script>
+    <script src="/src/client/app/inputs/inputs.route.js"></script>
+    <script src="/src/client/app/contact/contact.js"></script>
+    <script src="/src/client/app/contact/contact.route.js"></script>
+    <script src="/src/client/app/input2/input2.js"></script>
+    <script src="/src/client/app/input2/input2.route.js"></script>
+    <script src="/src/client/app/core/config.js"></script>
+    <script src="/src/client/app/core/dataservice.js"></script>
+    <script src="/src/client/app/core/exceptionHandlerProvider.js"></script>
+    <script src="/src/client/app/core/ginFilters.js"></script>
+    <script src="/src/client/app/core/userInputsService.js"></script>
+    <script src="/src/client/app/core/userNavigationService.js"></script>
+    <script src="/src/client/app/core/utilService.js"></script>
+    <script src="/src/client/app/widgets/dynamicCompile.js"></script>
+    <script src="/src/client/app/widgets/ginAudio.js"></script>
+    <script src="/src/client/app/widgets/ginConfirmClose.js"></script>
+    <script src="/src/client/app/widgets/organizationDisplay.js"></script>
+    <script src="/src/client/app/widgets/pageControls.js"></script>
+    <script src="/src/client/app/widgets/questionDisplay.js"></script>
+    <script src="/src/client/app/widgets/resolveLoader.js"></script>
+    <script src="/src/client/app/widgets/resultCard.js"></script>
+    <script src="/src/client/app/widgets/resultPageControls.js"></script>
+    <script src="/src/client/app/layout/shell.js"></script>
+    <script src="/src/client/app/results/results.js"></script>
+    <script src="/src/client/app/results/results.route.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreButton.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreContentFooter.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreContentHeader.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreGardCase.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreGeneralText.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreGroupedLink.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreGroupedOrg.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreLink.js"></script>
+    <script src="/src/client/app/widgets/viewMore/viewMoreQandA.js"></script>
+    <!-- endinject -->
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+</html>

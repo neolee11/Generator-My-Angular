@@ -1,0 +1,37 @@
+<div class="well result-card" dir=ltr>
+	<header>
+		<h4 class="header" ng-show="vm.showHeader"> {{vm.content.header}} </h4>
+	</header>
+
+	<div ng-class="vm.bodyStyle">
+		<div ng-hide="vm.showHeader" class="result-card-no-header-margin"></div>
+
+        <gin-audio audio-path ="vm.cardAudioSrc" css-class="center-block gin-audio-result-card-width"></gin-audio>
+
+		<section ng-show="vm.cardImageSrc">
+			<img ng-src="{{vm.cardImageSrc}}" alt="{{vm.content.header}}" class="center-block img-responsive"/>
+			<br/>
+		</section>
+
+		<section ng-bind-html="vm.contentText | trust"></section>
+
+		<section ng-show="vm.organization">
+			<organization-display organization="vm.organization" show-resource-name="false"></organization-display>
+		</section>
+
+		<div ng-show="vm.content.videoSrc">
+			<a href="{{vm.content.videoSrc}}" target="_blank">
+				<img ng-src="{{vm.content.videoImg}}"/>
+			</a>
+		</div>
+
+		<br/>
+		<!--<button type="button" class="btn center-block" ng-show="vm.viewButtonText" ng-class="vm.viewButtonStyle">-->
+		<!--{{vm.viewButtonText}}-->
+		<!--</button>-->
+		<!-- -->
+
+		<view-more-button content="vm.content"></view-more-button>
+
+	</div>
+</div>

@@ -1,0 +1,192 @@
+﻿<div class="contact-page">
+    <div class="contact-page-back">
+		<a ui-sref="input2" class="start-over" ng-click="vm.startOver()" role="button">Start Over</a>
+    </div>
+        <result-page-controls></result-page-controls>
+
+	<div class="contact-page-back-results">
+        <a ui-sref="results({diseaseId: {{vm.selectedDisease.id}} })" ng-click="vm.clickBack()" class="back2" role="button">Back To Your Results</a>
+    </div>
+
+	<div class="contact-header">
+	<h1 class="text-center">{{vm.title}}</h1>
+
+	<p class="first text-center">{{vm.subTitle}}</p>
+	</div>
+
+	<div class="contact-page-main-content-container">
+		<div class="contact-page-main-content" ng-hide="vm.hideLanding">
+
+			<h5>If you can't find the information you need about a rare or genetic disease on our Website, you can contact a GARD Information Specialist. We cannot make a diagnosis or give medical advice, but we can provide information. The information you provide is kept strictly confidential.</h5>
+
+			<!--<p class="second">-->
+				<!--You can contact a GARD Information Specialist. We cannot make a diagnosis or give medical advice,-->
+				<!--but we-->
+				<!--can provide information. The information you provide is kept strictly confidential.-->
+			<!--</p>-->
+
+			<div class="contact-form-list">
+				<ul>
+					<li>
+						<div>
+							<strong>By Telephone</strong> - Monday - Friday, 12-6 p.m. Eastern Time, Toll-free:
+							888-205-2311, TTY:
+							888-205-3223,
+							International: 301-251-4925
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong>By E-mail Form</strong>
+							<br/>
+							Please complete the form below. You will receive an e-mail response within
+							12 business days. Some questions submitted to GARD will be posted on the Web
+							site with all identifiable information removed. (See our
+							<a href="https://rarediseases.info.nih.gov/about-ordr/pages/36/privacy" target="_blank">privacy</a> statement.)
+							When you submit this form, you give us permission to post your question on
+							our Web site. If you do not want your question posted, please let us know.
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+		<br/>
+
+		<div class="center-block">
+
+			<form class="form-horizontal" name="vm.contact-form" ng-submit="vm.AddContact()">
+				<div class="form-group">
+					<div class="col-md-4 col-md-offset-2">
+						<label class="control-label">First Name :</label>
+                        <input type="text" ng-model="vm.firstName" name="FirstName" class="form-control"
+                               placeholder="First Name" />
+					</div>
+
+					<div class="col-md-4 ">
+						<label class="control-label">Last Name :</label>
+						<input type="text" ng-model="vm.lastName" name="LastName" class="form-control"
+						       placeholder="Last Name"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-4 col-md-offset-2">
+						<label class="control-label">Your Email :</label>
+						<input type="email" ng-model="vm.email" name="Email" required class="form-control"
+						       placeholder="Your Email"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-8 col-md-offset-2">
+						<label class="control-label">Your Question :</label>
+						<!--<input type="text" ng-model="vm.question" name="question" required class="form-control"-->
+						       <!--placeholder="Your Question"/>-->
+						<textarea ng-model="vm.question" rows="8" name="question" required class="form-control text-area-no-resize"
+						       placeholder="Your Question"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-4 col-md-offset-2">
+						<label class="control-label">I am a :</label>
+						<select class="form-control"
+						        ng-model="vm.categoryModel"
+						        ng-options="category.userCategoryName for category in vm.userCategories"
+						        ng-change="vm.ChangeUserCategory()"></select>
+					</div>
+
+					<div class="col-md-4">
+						<label class="control-label">I was referred by :</label>
+						<select class="form-control"
+						        ng-model="vm.referrenceModel"
+						        ng-options="referrer.referrerName for referrer in vm.referrers"
+						        ng-change="vm.ChangeReferrer()"></select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-5 col-md-offset-2">
+						<label class="control-label">I have contacted the information center before.</label>
+					</div>
+
+					<div class="col-md-4 ">
+						<label class="checkbox-inline">
+							<input type="checkbox" ng-model="vm.ContactedBefore" ng-true-value="true"
+							       ng-false-value="false"/> YES
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" ng-model="vm.ContactedBefore" ng-true-value="false"
+							       ng-false-value="true"/> NO
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-4 col-md-offset-2">
+						<label class="control-label">Country :</label>
+						<select class="form-control"
+						        ng-model="vm.countryModel"
+						        ng-options="country.countryName for country in vm.countries"
+						        ng-change="vm.ChangeCountry()"></select>
+					</div>
+
+					<div class="col-md-4 ">
+						<label class="control-label">U.S. State, if applicable :</label>
+						<select class="form-control"
+						        ng-model="vm.stateModel"
+						        ng-options="state.stateName for state in vm.states"
+						        ng-change="vm.ChangeState()"></select>
+					</div>
+				</div>
+
+					<div style="text-align:center;">
+                    <input type="submit" class="btn-submit">
+                </div>
+
+			</form>
+
+		</div>
+
+		<div class="contact-form-list">
+			<ul>
+				<li>
+					<div>
+						<strong>By U.S. Mail or Fax</strong> - Answered within 12 business days
+						<address>
+							Genetic and Rare Diseases Information Center <br/>
+							P.O. Box 8126 <br/>
+							Gaithersburg, MD 20898-8126 <br/>
+							Fax: 301-251-4911
+						</address>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+		<div class="contact-page-main-content" ng-show="vm.showConfirm">
+
+		<h5>Thank you for contacting us.</h5>
+
+		<p class="second">
+            A GARD Information Specialist will respond to your request. You can expect to hear
+            from us within the next 12 business days.<br>
+            You can also call toll-free at 1-888-205-2311 (TTY: 1-888-205-3223) to speak with a GARD Information
+            Specialist. For international calls, please use 301-251-4911. <br />                    
+		</p>	
+
+
+		</div>
+        </div>
+
+	<div class="contact-page-main-content-container" style="height:100px">
+
+
+	</div>
+
+</div>
+
+

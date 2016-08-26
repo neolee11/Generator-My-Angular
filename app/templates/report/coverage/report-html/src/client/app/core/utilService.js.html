@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./src/client/app/core/utilService.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./src/client/app/core/utilService.js</span></h1>
+    <h2>
+        Statements: <span class="metric">22.22% <small>(6 / 27)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">20% <small>(1 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">22.22% <small>(6 / 27)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">./src/client/app/core/</a> &#187; utilService.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular.module('app.core')
+        .factory('utilService', utilService);
+&nbsp;
+    /* @ngInject */
+<span class="fstat-no" title="function not covered" >    function utilService() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var service = {</span>
+            log: log,
+            formatTruncatedHtml: formatTruncatedHtml,
+            printStackTrace: printStackTrace, //printStackTrace is a global object from stacktrace-js library
+            simulatelongRunningFunction: simulatelongRunningFunction
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function log(enclosingMsg, logObj) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("Start of " + enclosingMsg);</span>
+<span class="cstat-no" title="statement not covered" >            console.log(logObj);</span>
+<span class="cstat-no" title="statement not covered" >            console.log("End of " + enclosingMsg);</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function formatTruncatedHtml(truncatedHtml, originalHtml) {</span>
+<span class="cstat-no" title="statement not covered" >            var lastOpenAnchorTag = truncatedHtml.lastIndexOf("&lt;a");</span>
+<span class="cstat-no" title="statement not covered" >            var lastCloseAnchorTag = truncatedHtml.lastIndexOf("&lt;/a&gt;");</span>
+<span class="cstat-no" title="statement not covered" >            if (lastCloseAnchorTag &lt; lastOpenAnchorTag) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var truncatedAnchorHtml = truncatedHtml.substring(lastOpenAnchorTag); </span>//this assumes truncatedHtml and orignalHtml have the same content before the truncated point
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var origCloseAnchorTagIndex = originalHtml.indexOf("&lt;/a&gt;", lastOpenAnchorTag);</span>
+<span class="cstat-no" title="statement not covered" >                var replacingAnchorLength = origCloseAnchorTagIndex - lastOpenAnchorTag + "&lt;/a&gt;".length;</span>
+<span class="cstat-no" title="statement not covered" >                var replacingAnchorHtml = originalHtml.substr(lastOpenAnchorTag, replacingAnchorLength);</span>
+&nbsp;
+                //truncatedHtml = truncatedHtml.replace(truncatedAnchorHtml, replacingAnchorHtml);
+<span class="cstat-no" title="statement not covered" >                truncatedHtml = truncatedHtml.substring(0, lastOpenAnchorTag) + replacingAnchorHtml;</span>
+<span class="cstat-no" title="statement not covered" >                truncatedHtml += ' ...';</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var lastOpenLiTag = truncatedHtml.lastIndexOf("&lt;li&gt;");</span>
+<span class="cstat-no" title="statement not covered" >            var lastCloseLiTag = truncatedHtml.lastIndexOf("&lt;/li&gt;");</span>
+<span class="cstat-no" title="statement not covered" >            if (lastCloseLiTag &lt; lastOpenLiTag) {</span>
+<span class="cstat-no" title="statement not covered" >                truncatedHtml += "&lt;/li&gt;";</span>
+                //truncatedHtml += "...";
+            }
+&nbsp;
+            //var lastOpenLiTag = truncatedHtml.lastIndexOf("&lt;li&gt;");
+            //var lastCloseLiTag = truncatedHtml.lastIndexOf("&lt;/li&gt;");
+            //if (lastCloseLiTag &lt; lastOpenLiTag) {
+            //    truncatedHtml = truncatedHtml.substring(0, lastOpenLiTag);
+            //    truncatedHtml += "...";
+            //}
+&nbsp;
+            //var lastOpenAnchorTag = truncatedHtml.lastIndexOf("&lt;a");
+            //var lastCloseAnchorTag = truncatedHtml.lastIndexOf("&lt;/a&gt;");
+            //if (lastCloseAnchorTag &lt; lastOpenAnchorTag) {
+            //    truncatedHtml = html.substring(0, lastOpenAnchorTag);
+            //    if(truncatedHtml.length &gt; 0) {
+            //        truncatedHtml += "...";
+            //    }
+            //}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return truncatedHtml;</span>
+        }
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function simulatelongRunningFunction() {</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; 2000000000; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                var b = i * 2 / 3;</span>
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return service;</span>
+    }
+&nbsp;
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 24 2016 14:07:15 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

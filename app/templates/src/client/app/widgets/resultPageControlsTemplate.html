@@ -1,0 +1,5 @@
+<div class="page-controls">
+	<img class="control play-circle-2" src="images/play2.png" alt="Play" ng-click= "vm.playItem()" ng-hide="vm.isStreaming || vm.hideAudio" />
+	<img class="control play-circle-2" src="images/pause2.png" alt="Pause" ng-click="vm.stopTrack()" ng-show="vm.isStreaming && !vm.hideAudio" />
+	<img class="control close-circle-2" gin-confirm-close="vm.close()" src="images/close2.png" alt="Close" />
+</div>

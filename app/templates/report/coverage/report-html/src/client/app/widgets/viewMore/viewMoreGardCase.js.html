@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./src/client/app/widgets/viewMore/viewMoreGardCase.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./src/client/app/widgets/viewMore/viewMoreGardCase.js</span></h1>
+    <h2>
+        Statements: <span class="metric">13.04% <small>(3 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">12.5% <small>(1 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">13.04% <small>(3 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../../index.html">All files</a> &#187; <a href="index.html">./src/client/app/widgets/viewMore/</a> &#187; viewMoreGardCase.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular
+        .module('app.widgets')
+        .controller('ViewMoreGardCase', ViewMoreGardCase);
+&nbsp;
+    /* @ngInject */
+<span class="fstat-no" title="function not covered" >    function ViewMoreGardCase($scope, $modalInstance, content, $location, $anchorScroll, $timeout, userNavigationService) {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.content = content;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.content.references.forEach(<span class="fstat-no" title="function not covered" >function(element, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >            element.processedRef = $scope.content.processedReferences[index];</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.modalInstance = $modalInstance;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.gotoQuestion = <span class="fstat-no" title="function not covered" >function(questionId) {</span></span>
+            // set the location.hash to the id of
+            // the element you wish to scroll to.
+<span class="cstat-no" title="statement not covered" >            $location.hash(questionId);</span>
+<span class="cstat-no" title="statement not covered" >            $anchorScroll();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.gotoRef = <span class="fstat-no" title="function not covered" >function(referenceId) {</span></span>
+            //console.log('go to ref');
+<span class="cstat-no" title="statement not covered" >            $location.hash(referenceId);</span>
+<span class="cstat-no" title="statement not covered" >            $anchorScroll();</span>
+        };
+&nbsp;
+        //vm.basicQuestion.question = $sce.trustAsHtml(vm.basicQuestion.questionText);
+        //vm.basicQuestion.answer = $sce.trustAsHtml(vm.basicQuestion.answerText);
+&nbsp;
+        //$scope.selected = {
+        //    item: $scope.items[0]
+        //};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.gotoContactPage = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordInputScreenActivity('contact');</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordUserNavigationStep();</span>
+<span class="cstat-no" title="statement not covered" >            console.log($scope.modalInstance);</span>
+<span class="cstat-no" title="statement not covered" >            $scope.modalInstance.close('close');</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.scrollToParentTop();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.close = <span class="fstat-no" title="function not covered" >function () {</span></span>
+            //$modalInstance.close('close');
+<span class="cstat-no" title="statement not covered" >            $scope.modalInstance.close('close');</span>
+        };
+&nbsp;
+        //$scope.cancel = function () {
+        //    $modalInstance.dismiss('cancel');
+        //};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.showReferenceSection = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            return $scope.content.references.length &gt; 0;</span>
+        };
+&nbsp;
+    }
+&nbsp;
+})();
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 24 2016 14:07:15 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿<div class="result-page">
+
+	<div class="result-page-header">
+
+		<div class="back-button">
+        	<a ui-sref="input2" class="start-over" ng-click="vm.startOver()" role="button">Start Over</a>
+		</div>
+
+		<result-page-controls></result-page-controls>
+
+		<h1 class="heading-text results-heading-text text-purple bold-text">{{vm.disease.name}}</h1>
+
+	</div>
+
+	<div class="result-page-main-content">
+
+
+		<!--<div id="loadingResultSpinner" class="hidden">-->
+			<!--<img src="/src/client/images/busy.gif"/>-->
+		<!--</div>-->
+
+		<div ng-show="vm.showTagContent()">
+			<form class="form-horizontal">
+
+				<div class="form-group">
+					<div class="col-md-6">
+						<label class="control-label result-tag-name">{{vm.currDisplayTag.tagName}}</label>
+                        <gin-audio audio-path="vm.currDisplayTag.tagAudio"></gin-audio>
+					</div>
+
+					<!--<div class="col-md-6 ">-->
+					<!--<select ng-model="vm.displayingTag"-->
+					<!--ng-options="tag.tagName for tag in vm.selectedTags"-->
+					<!--ng-change="vm.tagChange()" class="pull-right input-lg">-->
+					<!--</select>-->
+					<!--</div>-->
+				</div>
+			</form>
+
+			<div class="well basic-question" ng-if="vm.abrrevBasicQuestion && vm.showLessBasicQuestion">
+				<div>
+					<question-display question="vm.abrrevBasicQuestion.question"
+					                  references="vm.abrrevBasicQuestion.references"
+					                  processed-references="vm.abrrevBasicQuestion.processedReferences"
+					                  is-basic-question="true"
+							>
+					</question-display>
+				</div>
+				<button class="btn btn-default pull-right basic-question-button"
+				        ng-click="vm.ToggleReadMoreBasicQuestion()" ng-show="vm.showReadMoreBasicQuestionButton">Read
+					More
+				</button>
+				<br/>
+			</div>
+
+			<div class="well basic-question" ng-if="vm.basicQuestion && !vm.showLessBasicQuestion">
+
+				<div>
+					<question-display question="vm.basicQuestion.question"
+					                  references="vm.basicQuestion.references"
+					                  processed-references="vm.basicQuestion.processedReferences"
+					                  is-basic-question="true"
+							>
+					</question-display>
+				</div>
+				<button class="btn btn-default pull-right basic-question-button"
+				        ng-click="vm.ToggleReadMoreBasicQuestion()">Close
+				</button>
+				<br/>
+			</div>
+
+			<div class="cards">
+				<div class="col-md-4 col-sm-6 cards-padding" ng-repeat="col in vm.columns">
+					<div class="card" ng-repeat="content in col.collection">
+						<result-card content="content"></result-card>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div ng-show="!vm.showTagContent()" class="result-tag-no-content">
+			<h4>
+				You were also interested in the following topic(s):
+
+				<ul>
+					<li ng-repeat="nonDisplayTag in vm.nonDisplayingTags">
+						<h4>{{nonDisplayTag.tagName}}</h4>
+					</li>
+				</ul>
+
+				But there was no content for these topics, would you like to <a ng-click="vm.gotoContact()" ui-sref="contact">
+    contact
+    us
+</a>?
+			</h4>
+			<br/>
+			<br/>
+		</div>
+
+		<div class="row center results-next-previous">
+
+			<!--<a ng-click="vm.gotoPrevTag()" class="prev-card-topic pull-left" role="button" ng-hide="vm.hidePrevTopic()">-->
+				<!--{{vm.prevTopicName()}}-->
+			<!--</a>-->
+
+			<button type="button" class="btn-continue tag-nav" ng-hide="vm.hidePrevTopic()"
+			ng-click="vm.gotoPrevTag()"><span>{{vm.prevTopicName()}}</span>
+			</button>
+
+			<!--<a ng-click="vm.gotoNextTag()" class="next-card-topic pull-right" role="button"-->
+			   <!--ng-hide="vm.hideNextTopic()">-->
+				<!--{{vm.nextTopicName()}}-->
+			<!--</a>-->
+
+			<button type="button" class="btn-continue tag-nav" ng-hide="vm.hideNextTopic()"
+			ng-click="vm.gotoNextTag()">{{vm.nextTopicName()}}
+			</button>
+		</div>
+
+	</div>
+
+	<footer class="result-page-footer">
+		<h4 class="text-center result-text-normal">Can't find what you are looking for? <a ng-click="vm.gotoContact()" ui-sref="contact">CONTACT
+			US</a></h4>
+	</footer>
+
+</div>

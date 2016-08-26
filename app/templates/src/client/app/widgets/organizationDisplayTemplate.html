@@ -1,0 +1,80 @@
+<div>
+	<div ng-show="vm.showResourceName">
+		<strong >{{vm.organization.resourceName}}</strong> <br/>
+	</div>
+
+	<span ng-show="vm.organization.address1">
+		{{vm.organization.address1}} <br/>
+		<!--<br/>	-->
+	</span>
+
+	<!--{{vm.organization.address2}} <br/>-->
+
+	<span ng-show="vm.organization.address2">
+		{{vm.organization.address2}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.address3">
+		{{vm.organization.address3}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.address4">
+		{{vm.organization.address4}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.address5">
+		{{vm.organization.address5}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.address6">
+		{{vm.organization.address6}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.address7">
+		{{vm.organization.address7}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.address8">
+		{{vm.organization.address8}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.city">
+		{{vm.organization.city}},
+	</span>
+
+	<span ng-show="vm.organization.state && vm.organization.state !== '0'">
+		{{vm.organization.state}},
+	</span>
+
+	<span ng-show="vm.organization.zipCode">
+		{{vm.organization.zipCode}}&nbsp; <br/>
+	</span>
+
+	<span ng-show="vm.organization.country && vm.organization.country.toLowerCase() !== 'united states'">
+		{{vm.organization.country}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.tollFree">
+		Toll-free: {{vm.organization.tollFree}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.phone">
+		Telephone: {{vm.organization.phone}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.tty">
+		TTY: {{vm.organization.tty}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.fax">
+		Fax: {{vm.organization.fax}} <br/>
+	</span>
+
+	<span ng-show="vm.organization.email">
+		E-mail:  <a href="mailto:{{vm.organization.email}}">{{vm.organization.email}}</a> <br/>
+	</span>
+
+	<span ng-show="vm.organization.website">
+		Website:  <a href="{{vm.organization.website}}" target='_blank'>{{vm.organization.website}}</a> <br/>
+	</span>
+</div>

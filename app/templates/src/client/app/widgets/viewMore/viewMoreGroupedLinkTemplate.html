@@ -1,0 +1,13 @@
+<view-more-content-header title={{title}} modal-instance="modalInstance"></view-more-content-header>
+
+<div class="view-more modal-body">
+
+	<ul>
+		<li ng-repeat="desc in content.descriptions" ng-bind-html="desc.resourceDescriptionText + '</br>' | trust">
+
+		</li>
+	</ul>
+
+</div>
+
+<view-more-content-footer modal-instance="modalInstance"></view-more-content-footer>

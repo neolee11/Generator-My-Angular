@@ -1,0 +1,12 @@
+<view-more-content-header title={{title}} modal-instance="modalInstance"></view-more-content-header>
+
+<div class="view-more modal-body">
+
+	<div ng-repeat="org in content.organizations" >
+		<organization-display organization="org" show-resource-name="true"></organization-display>
+		<br/>
+	</div>
+
+</div>
+
+<view-more-content-footer modal-instance="modalInstance"></view-more-content-footer>

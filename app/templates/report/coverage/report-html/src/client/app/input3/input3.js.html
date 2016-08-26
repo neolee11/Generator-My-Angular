@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./src/client/app/input3/input3.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./src/client/app/input3/input3.js</span></h1>
+    <h2>
+        Statements: <span class="metric">7.55% <small>(4 / 53)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">7.69% <small>(1 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">7.55% <small>(4 / 53)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">./src/client/app/input3/</a> &#187; input3.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">﻿(function () {
+    'use strict';
+&nbsp;
+    angular
+        .module('app.input3')
+        .controller('Input3', Input3);
+&nbsp;
+    /* @ngInject */
+<span class="fstat-no" title="function not covered" >    function Input3($state, userInputsService, utilService, allLivingWithTags, userNavigationService) {</span>
+<span class="cstat-no" title="statement not covered" >        var vm = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.title = 'Do you need resources for these topics?';</span>
+<span class="cstat-no" title="statement not covered" >        vm.selectedDisease = { id: 0, name: 'Disease Not Selected' };</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        userNavigationService.recordScreenName('input3');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.selectedAll = false;</span>
+<span class="cstat-no" title="statement not covered" >        if (userInputsService.getSelectedDisease()) {</span>
+<span class="cstat-no" title="statement not covered" >            vm.selectedDisease = userInputsService.getSelectedDisease();</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.livingWithTags = allLivingWithTags;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.ckb = [];</span>
+<span class="cstat-no" title="statement not covered" >        syncCheckbox();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.selectAllChange = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (vm.selectedAll) {</span>
+<span class="cstat-no" title="statement not covered" >                allLivingWithTags.forEach(<span class="fstat-no" title="function not covered" >function (element) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    userInputsService.addSelectedTag(element);</span>
+                });
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                allLivingWithTags.forEach(<span class="fstat-no" title="function not covered" >function (element) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    userInputsService.removeSelectedTag(element);</span>
+                });
+            }
+<span class="cstat-no" title="statement not covered" >            syncCheckbox();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.tagSelectionChange = <span class="fstat-no" title="function not covered" >function (tag) {</span></span>
+<span class="cstat-no" title="statement not covered" >            vm.selectedAll = false;</span>
+<span class="cstat-no" title="statement not covered" >            var id = tag.tagId;</span>
+<span class="cstat-no" title="statement not covered" >            if (vm.ckb[id]) {</span>
+<span class="cstat-no" title="statement not covered" >                userInputsService.addSelectedTag(tag);</span>
+<span class="cstat-no" title="statement not covered" >                syncCheckbox();</span>
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                userInputsService.removeSelectedTag(tag);</span>
+            }
+        };
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function syncCheckbox() {</span>
+<span class="cstat-no" title="statement not covered" >            vm.ckb = [];</span>
+<span class="cstat-no" title="statement not covered" >            if (userInputsService.getSelectedTags().length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                userInputsService.getSelectedTags().forEach(<span class="fstat-no" title="function not covered" >function (element) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    vm.ckb[element.tagId] = true;</span>
+                });
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.continueDisabled = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (userInputsService.undiagosedDiseaseSelected()) {</span>
+<span class="cstat-no" title="statement not covered" >                return userInputsService.getSelectedTags().length === 0;</span>
+            }
+            else {
+                //Old requirement: user selected a disease, and selected something some disease information input page,
+                // do not need to select from living with page
+                //return false;
+&nbsp;
+                //New requirement: user does not have to select any tag from disease information input page,
+                //but needs to select at least one tag overall
+<span class="cstat-no" title="statement not covered" >                return userInputsService.getSelectedTags().length === 0;</span>
+            }
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.clickContinue = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.pauseAudio();</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordTagSelection(userInputsService.getSelectedTags());</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordInputScreenActivity('results');</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordUserNavigationStep();</span>
+<span class="cstat-no" title="statement not covered" >            $state.go('results', {diseaseId: vm.selectedDisease.id});</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.scrollToParentTop();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.clickBack = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.pauseAudio();</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordInputScreenActivity("input2");</span>
+<span class="cstat-no" title="statement not covered" >            userNavigationService.recordUserNavigationStep();</span>
+            //$state.go(vm.getBackPath);
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.getBackPath = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (vm.selectedDisease.id === 0 || (vm.selectedDisease === userInputsService.getUndiagnosedDisease())) {</span>
+                // Add to Route
+<span class="cstat-no" title="statement not covered" >                return 'inputs';</span>
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                return 'input2';</span>
+            }
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.viewSelectedTags = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log(userInputsService.getSelectedTags());</span>
+        };
+    }
+&nbsp;
+})();
+&nbsp;
+//vm.knowMore = [
+//    'Find a specialist or expert',
+//    'Find a specialty treatment center',
+//    'Find a genetics clinic',
+//    'Find a researcher who is studying a specific condition',
+//    'Find support and others with undiagnosed conditions',
+//    'To learn more about financial assistance for those undiagnosed'
+//];</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 24 2016 14:07:15 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

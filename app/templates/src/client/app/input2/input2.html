@@ -1,0 +1,67 @@
+﻿<div class="input-page">
+
+	<div class="back-button">
+		<a class="back" ng-click="vm.clickBack()" ng-show="vm.showBackButton">BACK</a>
+	</div>
+
+	<page-controls></page-controls>
+
+
+	<h1 class="heading-text bold-text">{{vm.title}}</h1>
+
+	<!--<div class="input-text-highlighted">-->
+	<!--{{vm.selectedDisease.name}}-->
+	<!--</div>-->
+
+	<!--<div ng-click="vm.selectAllDiseaseInfoTags()">-->
+	<!--<h3 ng-class="{'input-text-highlighted': vm.selectedAllDiseaseInfoTags, 'input-text-normal': !vm.selectedAllDiseaseInfoTags, 'input-selection-hover': vm.inputSelectionHover1}"-->
+	<!--ng-mouseenter="vm.inputSelectionHover1=true" ng-mouseleave="vm.inputSelectionHover1=false"-->
+	<!-->-->
+	<!--I'll take everything you've got on {{vm.selectedDisease.name}}-->
+	<!--</h3>-->
+	<!--</div>-->
+
+
+	<!--<h3 class="input-text-normal">I want to know about:</h3>-->
+	<div class="topic-selections">
+		<div class="row topic-selections">
+			<div ng-repeat="diseaseInfoTag in vm.diseaseInformationTags" class="col-md-4 col-sm-6 col-xs-12"
+				 ng-class="{'input-text-normal': !vm.ckb[diseaseInfoTag.tagId], 'input-text-highlighted': vm.ckb[diseaseInfoTag.tagId]}">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="vm.ckb[diseaseInfoTag.tagId]"
+							   ng-change="vm.tagSelectionChange(diseaseInfoTag)"
+							   ng-checked="vm.ckb[diseaseInfoTag.tagId]"
+								>{{diseaseInfoTag.tagName}}</input>
+					</label>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row topic-selections topic-selections-all">
+			<div class="checkbox input-text-normal col-md-12">
+				<label>
+					<input type="checkbox" ng-model="vm.selectedAll"
+						   ng-change="vm.selectAllChange()">Select all
+					</input>
+				</label>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<a ui-sref="input3" class="btn link-continue link-continue-wider pull-right"
+	   ng-disabled="vm.continueDisabled()" ng-click="vm.clickContinue()" role="button">Next: Choose Services</a>
+
+
+	<!--<div ng-show="true">-->
+		<!--<button ng-click="vm.causeError()">Cause Error</button>-->
+	<!--</div>-->
+
+	<!--<div>-->
+	<!--<button ng-click="vm.viewSelectedTags()" class="btn">Selected Tags</button>-->
+	<!--</div>-->
+</div>

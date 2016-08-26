@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./src/client/app/widgets/viewMore/viewMoreButton.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./src/client/app/widgets/viewMore/viewMoreButton.js</span></h1>
+    <h2>
+        Statements: <span class="metric">9.09% <small>(5 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">9.09% <small>(5 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../../index.html">All files</a> &#187; <a href="index.html">./src/client/app/widgets/viewMore/</a> &#187; viewMoreButton.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular.module('app.widgets')
+        .directive('viewMoreButton', viewMoreButton);
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function viewMoreButton() {</span>
+&nbsp;
+        /* @ngInject */
+<span class="fstat-no" title="function not covered" >        function controller($modal, userNavigationService, $scope, $timeout) {</span>
+            /*jshint maxcomplexity:30 */
+            /* jshint validthis:true */
+<span class="cstat-no" title="statement not covered" >            var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >            var templateUrl, templateCtrl;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            vm.cardCharLimit = 400;</span>
+<span class="cstat-no" title="statement not covered" >            vm.showButton = true;</span>
+<span class="cstat-no" title="statement not covered" >            vm.viewButtonStyle = 'view-button-normal';</span>
+<span class="cstat-no" title="statement not covered" >            vm.viewButtonText = 'View';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (vm.content) {</span>
+<span class="cstat-no" title="statement not covered" >                if (vm.content.cardType === 'GardCase' || vm.content.cardType === 'QuestionAndAnswer') {</span>
+<span class="cstat-no" title="statement not covered" >                    vm.bodyStyle = 'body-important';</span>
+<span class="cstat-no" title="statement not covered" >                    vm.viewButtonStyle = 'view-button-important';</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                switch (vm.content.cardType) {</span>
+                    case 'Organization':
+<span class="cstat-no" title="statement not covered" >                        vm.showButton = false;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    case 'GroupedOrganization':
+<span class="cstat-no" title="statement not covered" >                        templateUrl = 'app/widgets/viewMore/viewMoreGroupedOrgTemplate.html';</span>
+<span class="cstat-no" title="statement not covered" >                        templateCtrl = 'ViewMoreGroupedOrg';</span>
+<span class="cstat-no" title="statement not covered" >                        vm.viewButtonText = 'View Organizations';</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    case 'QuestionAndAnswer':
+<span class="cstat-no" title="statement not covered" >                        templateUrl = 'app/widgets/viewMore/viewMoreQandATemplate.html';</span>
+<span class="cstat-no" title="statement not covered" >                        templateCtrl = 'ViewMoreQandA';</span>
+<span class="cstat-no" title="statement not covered" >                        vm.viewButtonText = 'View Answer';</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    case 'GardCase': //Your Questions Answered Card
+<span class="cstat-no" title="statement not covered" >                        templateUrl = 'app/widgets/viewMore/viewMoreGardCaseTemplate.html';</span>
+<span class="cstat-no" title="statement not covered" >                        templateCtrl = 'ViewMoreGardCase';</span>
+<span class="cstat-no" title="statement not covered" >                        vm.viewButtonText = 'View Answer';</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    case 'GeneralText':
+<span class="cstat-no" title="statement not covered" >                        templateUrl = 'app/widgets/viewMore/viewMoreGeneralTextTemplate.html';</span>
+<span class="cstat-no" title="statement not covered" >                        templateCtrl = 'ViewMoreGeneralText';</span>
+<span class="cstat-no" title="statement not covered" >                        vm.showButton = vm.content.generalText.htmlContent.length &gt; vm.cardCharLimit;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    case 'ResourceLink':
+                        //templateUrl = 'app/widgets/viewMore/viewMoreLinkTemplate.html';
+                        //templateCtrl = 'ViewMoreLink';
+                        //vm.showButton = vm.content.resourceDescription.resourceDescriptionText.length &gt; vm.cardCharLimit;
+<span class="cstat-no" title="statement not covered" >                        vm.showButton = false;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    case 'GroupedResourceLink':
+<span class="cstat-no" title="statement not covered" >                        templateUrl = 'app/widgets/viewMore/viewMoreGroupedLinkTemplate.html';</span>
+<span class="cstat-no" title="statement not covered" >                        templateCtrl = 'ViewMoreGroupedLink';</span>
+<span class="cstat-no" title="statement not covered" >                        var totalLen = _.sum(vm.content.descriptions, <span class="fstat-no" title="function not covered" >function (desc) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return desc.resourceDescriptionText.length;</span>
+                        });
+<span class="cstat-no" title="statement not covered" >                        vm.showButton = totalLen &gt; vm.cardCharLimit;</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                    default:
+<span class="cstat-no" title="statement not covered" >                        vm.viewButtonText = 'View';</span>
+<span class="cstat-no" title="statement not covered" >                        break;</span>
+                }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var openedClassStyle = 'modal-open';</span>
+<span class="cstat-no" title="statement not covered" >            if ('parentIFrame' in window) {</span>
+<span class="cstat-no" title="statement not covered" >                openedClassStyle = 'hide-vertical-scroll';</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            vm.open = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                var modalInstance = $modal.open({</span>
+                    //bindToController: true,
+                    animation: true,
+                    templateUrl: templateUrl,
+                    controller: templateCtrl,
+                    size: 'lg',
+                    openedClass: openedClassStyle,
+                    resolve: {
+                        content: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                            return vm.content;</span>
+                        }
+                    }
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                (modalInstance.opened).then(modalOpened);</span>
+<span class="cstat-no" title="statement not covered" >                userNavigationService.scrollToParentTop();</span>
+            };
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function modalOpened() {</span>
+<span class="cstat-no" title="statement not covered" >                $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    angular.element('.view-more.modal-body').trigger('click');</span>
+                    //console.log('click event fired');
+                }, 1000);
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            require: '^resultCard',
+            restrict: 'E',
+            scope: {
+                content: '='
+            },
+            link: <span class="fstat-no" title="function not covered" >function (scope, element, attrs) {</span>
+                //add some event listeners later
+                //console.log(scope.vm.tag);
+            },
+            controller: controller,
+            controllerAs: 'vm',
+            bindToController: true,
+            templateUrl: 'app/widgets/viewMore/viewMoreButtonTemplate.html'
+        };
+    }
+})();</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 24 2016 14:07:15 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

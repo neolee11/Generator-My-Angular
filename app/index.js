@@ -7,25 +7,58 @@ var _ = require('lodash');
 
 
 module.exports = generators.Base.extend({
-    constructor: function(){
+    constructor: function () {
         generators.Base.apply(this, arguments);
 
     },
 
-    initializing: function(){
+    initializing: function () {
         console.log('init');
     },
-    prompting: function(){
+    prompting: function () {
     },
-    configuring: function(){
+    configuring: function () {
     },
-    writing: function(){
+    default: function () {
+        // console.log("default");
     },
-    conflicts: function(){
+    writing: {
+        gulpfile: function () {
+
+
+        },
+
+        packageJSON: function () {
+        },
+
+        git: function () {
+        },
+
+        bower: function () {
+
+        },
+
+        appStaticFiles: function () {
+            // var source = this.templatePath('_gulp.png');
+            // var destination = this.destinationPath('gulp.png');
+            // this.copy(source, destination);
+            this.copy('_gulp.png', 'gulp.png');
+            this.directory('src', 'src');
+        },
+
+        scripts: function () {
+
+        },
+
+        html: function () {
+
+        }
     },
-    install: function(){
+    conflicts: function () {
     },
-    end: function(){
+    install: function () {
+    },
+    end: function () {
     }
 
 

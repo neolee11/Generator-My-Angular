@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./src/client/app/widgets/questionDisplay.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./src/client/app/widgets/questionDisplay.js</span></h1>
+    <h2>
+        Statements: <span class="metric">25% <small>(5 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">9.09% <small>(1 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">25% <small>(5 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">./src/client/app/widgets/</a> &#187; questionDisplay.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular.module('app.widgets')
+        .directive('questionDisplay', questionDisplay);
+&nbsp;
+    /* @ngInject */
+<span class="fstat-no" title="function not covered" >    function questionDisplay() {</span>
+&nbsp;
+        /* @ngInject */
+<span class="fstat-no" title="function not covered" >        function controller($scope, $location, $anchorScroll, $compile, utilService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.$watch(<span class="fstat-no" title="function not covered" >function (scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                return scope.processedReferences;</span>
+            }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                appendProcessedRefToReferences();</span>
+            });
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function appendProcessedRefToReferences() {</span>
+<span class="cstat-no" title="statement not covered" >                if ($scope.references) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.references.forEach(<span class="fstat-no" title="function not covered" >function (element, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        element.processedRef = $scope.processedReferences[index];</span>
+                    });
+                }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.gotoQuestion = <span class="fstat-no" title="function not covered" >function (questionId) {</span></span>
+                // set the location.hash to the id of
+                // the element you wish to scroll to.
+<span class="cstat-no" title="statement not covered" >                $location.hash(questionId);</span>
+<span class="cstat-no" title="statement not covered" >                $anchorScroll();</span>
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.gotoRef = <span class="fstat-no" title="function not covered" >function (referenceId) {</span></span>
+                //console.log('gotoRef called');
+<span class="cstat-no" title="statement not covered" >                $location.hash(referenceId);</span>
+<span class="cstat-no" title="statement not covered" >                $anchorScroll();</span>
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.showReferenceSection = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                return $scope.references &amp;&amp; $scope.references.length &gt; 0;</span>
+            };
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: 'E',
+            scope: {
+                question: '=',
+                references: '=',
+                processedReferences: '=',
+                isBasicQuestion: '='
+            },
+            link: <span class="fstat-no" title="function not covered" >function (scope, element, attrs) {</span>
+                //add some event listeners later
+            },
+            controller: controller,
+            //controllerAs: 'vm',
+            //bindToController: true,
+            templateUrl: 'app/widgets/questionDisplayTemplate.html'
+        };
+    }
+})();</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 24 2016 14:07:15 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

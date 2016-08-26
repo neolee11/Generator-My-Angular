@@ -1,0 +1,9 @@
+<section ng-show="vm.audioPath" >
+    <audio controls="controls" class="{{vm.cssClass}}">
+        <source ng-src="{{vm.audioPath | trustedAudioUrl}}" type="audio/mpeg" />
+        <!--<source ng-src="{{vm.audio}}" type="audio/mpeg" />-->
+        <!--<source ng-src="{{vm.audio}}" type="audio/ogg" />-->
+    </audio>
+    <br>
+</section>
+

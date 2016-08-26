@@ -1,0 +1,31 @@
+<div ng-hide="isBasicQuestion">
+	<h3>Your Question</h3>
+
+	<!--<div ng-bind-html="question.questionText | trust" ng-class="{'bold-font':isBasicQuestion}">-->
+	<!--</div>-->
+
+	<div ng-bind-html="question.questionText | trust">
+	</div>
+
+	<br/>
+
+	<h3>Our Answer</h3>
+</div>
+
+<div>
+	<section ng-bind-html="question.answerText | trust" dynamic-compile="html"></section>
+	<div align="right" ng-show="question.lastReviewedDate">
+		Last updated: {{question.lastReviewedDate | date: 'M/d/yyyy'}}
+	</div>
+</div>
+
+<div ng-show="showReferenceSection()">
+	<br/>
+	<h5>References</h5>
+	<ul class="list_with_numbers">
+		<li ng-repeat="reference in references">
+			<a id="ref_{{reference.referenceId}}"></a>
+			<span ng-bind-html="reference.processedRef | trust"></span>
+		</li>
+	</ul>
+</div>

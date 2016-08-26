@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./src/client/app/widgets/pageControls.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./src/client/app/widgets/pageControls.js</span></h1>
+    <h2>
+        Statements: <span class="metric">10.87% <small>(5 / 46)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">10.87% <small>(5 / 46)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">./src/client/app/widgets/</a> &#187; pageControls.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular.module('app.widgets')
+        .directive('pageControls', pageControls);
+&nbsp;
+    /* @ngInject */
+<span class="fstat-no" title="function not covered" >    function pageControls() {</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >        function controller(userNavigationService, $scope) {</span>
+            /*jshint maxcomplexity:30 */
+            /* jshint validthis:true */
+<span class="cstat-no" title="statement not covered" >            var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >            vm.isStreaming = false;</span>
+<span class="cstat-no" title="statement not covered" >            vm.audioElement = null;</span>
+ 
+<span class="cstat-no" title="statement not covered" >            vm.currentPage = userNavigationService.getScreenName();</span>
+&nbsp;
+            //Set Audio sources
+<span class="cstat-no" title="statement not covered" >            var audioSourceInputs = "https://rarediseases.info.nih.gov/files/gin/Welcome.mp3";</span>
+<span class="cstat-no" title="statement not covered" >            var audioSourceInput2 = "https://rarediseases.info.nih.gov/files/gin/Welcome.mp3";</span>
+<span class="cstat-no" title="statement not covered" >            var audioSourceInput3 = "https://rarediseases.info.nih.gov/files/gin/LivingWith.mp3";</span>
+           
+<span class="cstat-no" title="statement not covered" >            vm.close = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                if ('parentIFrame' in window) {</span>
+<span class="cstat-no" title="statement not covered" >                    window.parentIFrame.sendMessage('close');</span>
+                }
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (userNavigationService.getScreenName() === 'inputs') {</span>
+<span class="cstat-no" title="statement not covered" >                vm.audioElement = new Audio(audioSourceInputs);</span>
+<span class="cstat-no" title="statement not covered" >                userNavigationService.setAudio(vm.audioElement);</span>
+<span class="cstat-no" title="statement not covered" >                if (userNavigationService.getPlayedStatus('inputs') === false) {</span>
+<span class="cstat-no" title="statement not covered" >                    setAutoplay();</span>
+<span class="cstat-no" title="statement not covered" >                    userNavigationService.recordScreenPlayed('inputs', true);</span>
+                }
+            }
+            else <span class="cstat-no" title="statement not covered" >if (userNavigationService.getScreenName() === 'input2') {</span>
+<span class="cstat-no" title="statement not covered" >                vm.audioElement = new Audio(audioSourceInput2);</span>
+<span class="cstat-no" title="statement not covered" >                userNavigationService.setAudio(vm.audioElement);</span>
+<span class="cstat-no" title="statement not covered" >                if (userNavigationService.getPlayedStatus('input2') === false) {</span>
+<span class="cstat-no" title="statement not covered" >                    setAutoplay();</span>
+<span class="cstat-no" title="statement not covered" >                    userNavigationService.recordScreenPlayed('input2', true);</span>
+                }
+            }
+            else <span class="cstat-no" title="statement not covered" >if (userNavigationService.getScreenName() === 'input3') {</span>
+<span class="cstat-no" title="statement not covered" >                vm.audioElement = new Audio(audioSourceInput3); </span>
+<span class="cstat-no" title="statement not covered" >                userNavigationService.setAudio(vm.audioElement);</span>
+<span class="cstat-no" title="statement not covered" >                if (userNavigationService.getPlayedStatus('input3') === false) {</span>
+<span class="cstat-no" title="statement not covered" >                    setAutoplay();</span>
+<span class="cstat-no" title="statement not covered" >                    userNavigationService.recordScreenPlayed('input3', true);</span>
+                }
+            }
+&nbsp;
+<span class="fstat-no" title="function not covered" >            function setAutoplay() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                userNavigationService.playAudio();</span>
+<span class="cstat-no" title="statement not covered" >                vm.isStreaming = true;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            vm.playItem = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                userNavigationService.playAudio();</span>
+<span class="cstat-no" title="statement not covered" >                vm.isStreaming = true;</span>
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            vm.stopTrack = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (vm.isStreaming) {</span>
+<span class="cstat-no" title="statement not covered" >                    userNavigationService.pauseAudio();</span>
+<span class="cstat-no" title="statement not covered" >                    vm.isStreaming = false;</span>
+                }
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            vm.audioElement.onended = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                vm.isStreaming = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.$apply();              </span>
+            };
+&nbsp;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: 'E',
+            scope: {
+                content: '='
+            },
+            link: <span class="fstat-no" title="function not covered" >function (scope, element, attrs)</span>
+            {
+                
+            },
+            controller: controller,
+            controllerAs: 'vm',
+            bindToController: true,
+            templateUrl: 'app/widgets/pageControlsTemplate.html'
+        };
+    }
+})();</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 24 2016 14:07:15 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

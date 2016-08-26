@@ -1,0 +1,56 @@
+﻿<!--<div class="input-page well center-block">-->
+<div class="input-page center-block">
+
+	<page-controls></page-controls>
+
+	<h1 class="input-text-highlighted bold-text">{{vm.title}}</h1>
+
+	<form class="form-horizontal">
+
+		<div ng-click="vm.selectOption(1)" class="form-group ">
+
+            <label id="labelInputDisease" class="control-label lead col-md-5 text-left-align"
+			       ng-class="{'input-text-normal':!vm.opt1Selected, 'input-text-highlighted': vm.opt1Selected, 'input-selection-hover': vm.inputSelectionHover1}"
+			       ng-mouseenter="vm.inputSelectionHover1=true" ng-mouseleave="vm.inputSelectionHover1=false"
+			       for="inputDisease">
+				Hi, I’m looking for information about
+			</label>
+
+			<div class="col-md-5">
+				<input id="inputDisease" type="text" ng-model="vm.selectedDisease" placeholder="Select Disease"
+			       typeahead="disease as disease.name for disease in vm.diseases | filter:{name: $viewValue} | limitTo:20"
+                       class="form-control input-lg " ng-aria="vm.selectedDisease" aria-labelledby="labelInputDisease" />
+			</div>
+
+
+		</div>
+
+		<div ng-click="vm.selectOption(2)"
+		     class="form-group">
+			<div class="col-md-12">
+				<label class="control-label lead"
+				       ng-class="{'input-text-normal':!vm.opt2Selected, 'input-text-highlighted': vm.opt2Selected, 'input-selection-hover': vm.inputSelectionHover2}"
+                       ng-mouseenter="vm.inputSelectionHover2=true" ng-mouseleave="vm.inputSelectionHover2=false">
+					Hi, I’m looking for information for an undiagnosed condition.
+				</label>
+			</div>
+		</div>
+
+        <br />
+
+	</form>
+
+	<div class="clearfix">
+        <br />
+        <br />
+		<!--Press Enter or-->
+		<button type="button" class="btn-continue pull-right" ng-disabled="vm.continueDisabled()"
+                ng-click="vm.clickContinue()" ng-Aria="vm.continueDisabled()">
+            Continue
+		</button>
+
+		<!--<a ui-sref="input2" class="btn btn-info" role="button" ng-click="vm.clickContinue()">Continue</a>-->
+	</div>
+
+
+</div>

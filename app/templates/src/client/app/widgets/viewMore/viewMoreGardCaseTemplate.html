@@ -1,0 +1,47 @@
+<view-more-content-header title="Your Questions Answered" modal-instance="modalInstance"></view-more-content-header>
+
+<div class="view-more modal-body">
+
+	<h3>Your Question</h3>
+	<div ng-bind-html="content.case.abbreviatedQuestion | trust">
+	</div>
+	<br/>
+
+	<h3>Our Answer</h3>
+
+	<p>We have identified the following information that we hope you find helpful. If you still have questions, please
+        <a ng-click="gotoContactPage()" ui-sref="contact">contact us</a>.</p>
+
+	<div class="on_page" ng-show="content.caseQuestions.length > 0">
+		<h5>Questions on this page</h5>
+		<ul>
+			<li ng-repeat="caseQuestion in content.caseQuestions">
+				<a ng-click="gotoQuestion(caseQuestion.questionID)">{{caseQuestion.questionText}}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div ng-repeat="caseQuestion in content.caseQuestions">
+		<p><a id="{{caseQuestion.questionID}}"></a><strong>{{caseQuestion.questionText}}</strong></p>
+		<!--<div class="disease_answer">{{caseQuestion.answerText | trust}}</div>-->
+		<section ng-bind-html="caseQuestion.answerText | trust" dynamic-compile="html"></section>
+		<div align="right">
+			Last updated: {{caseQuestion.lastReviewedDate | date: 'M/d/yyyy'}}
+		</div>
+	</div>
+
+	<div ng-show="showReferenceSection()">
+		<br />
+		<h5>References</h5>
+		<ul class="list_with_numbers">
+			<li ng-repeat="reference in content.references">
+				<a id="ref_{{reference.referenceId}}"></a>
+				<span ng-bind-html="reference.processedRef | trust"></span>
+				<!--@Html.Raw(ORDRWebsite.Code.DiseaseHelpers.ReferenceHelper.ProcessReference(item))-->
+			</li>
+		</ul>
+
+	</div>
+</div>
+
+<view-more-content-footer modal-instance="modalInstance"></view-more-content-footer>
