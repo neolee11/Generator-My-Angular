@@ -42,8 +42,8 @@ module.exports = generators.Base.extend({
             // var source = this.templatePath('_gulp.png');
             // var destination = this.destinationPath('gulp.png');
             // this.copy(source, destination);
-            this.copy('_gulp.png', 'gulp.png');
-            this.directory('src', 'src');
+            // this.copy('_gulp.png', 'gulp.png');
+            this.directory('GardTemplate', 'app');
         },
 
         scripts: function () {
